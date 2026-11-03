@@ -9,11 +9,15 @@
       // Hide before the first paint; keep content accessible if main.js fails.
       if ("IntersectionObserver" in window) {
         document.documentElement.classList.add("reveal-enabled");
-        document.addEventListener("DOMContentLoaded", function () {
-          if (!document.documentElement.classList.contains("reveal-ready")) {
-            document.documentElement.classList.remove("reveal-enabled");
-          }
-        }, { once: true });
+        document.addEventListener(
+          "DOMContentLoaded",
+          function () {
+            if (!document.documentElement.classList.contains("reveal-ready")) {
+              document.documentElement.classList.remove("reveal-enabled");
+            }
+          },
+          { once: true },
+        );
       }
     </script>
     <link rel="stylesheet" href="style.css" />
@@ -28,7 +32,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6Lejwp0tAAAAADsvhe3qxuCBg5FT61je8Bj5Chrl"></script>
-    <link rel="stylesheet" href="my-react-widget/dist/assets/react-widget.css?v=3b2cf8306bf7" />
+    <link
+      rel="stylesheet"
+      href="my-react-widget/dist/assets/react-widget.css?v=3b2cf8306bf7"
+    />
   </head>
   <body>
     <!-- Background elements -->
@@ -43,13 +50,28 @@
 
     <!-- My Projects -->
 
-    <section id="projects" aria-labelledby="projects-heading" data-nav-section data-reveal>
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      data-nav-section
+      data-reveal
+    >
       <h1 class="MainHeader3" id="projects-heading">My Projects</h1>
       <div class="cards">
         <article class="card">
           <div class="project-media">
-            <a href="https://github.com/RETO2LOL/MusicPlayer_for_MPD" aria-label="View MPD clients on GitHub">
-              <img src="./public/MPDimage.png" alt="MPD logo with headphones" width="1254" height="1254" loading="lazy" decoding="async">
+            <a
+              href="https://github.com/RETO2LOL/MusicPlayer_for_MPD"
+              aria-label="View MPD clients on GitHub"
+            >
+              <img
+                src="./public/assets/MPDimage.png"
+                alt="MPD logo with headphones"
+                width="1254"
+                height="1254"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </div>
           <div class="card-con">
@@ -58,14 +80,18 @@
           </div>
         </article>
         <article class="card card-placeholder">
-          <div class="project-media" aria-hidden="true"><span class="project-plus">+</span></div>
+          <div class="project-media" aria-hidden="true">
+            <span class="project-plus">+</span>
+          </div>
           <div class="card-con">
             <p class="project-label">Coming next</p>
             <h2 class="cardText">Future project</h2>
           </div>
         </article>
         <article class="card card-placeholder">
-          <div class="project-media" aria-hidden="true"><span class="project-plus">+</span></div>
+          <div class="project-media" aria-hidden="true">
+            <span class="project-plus">+</span>
+          </div>
           <div class="card-con">
             <p class="project-label">Coming next</p>
             <h2 class="cardText">Future project</h2>
@@ -79,7 +105,9 @@
       <h1 class="AboutMeHeader" id="AboutMeNavigation">About me</h1>
       <div class="about-skills-row">
         <div class="AboutMeCard">
-          <div class="AboutMeImage"><i class="fa-solid fa-circle-user"></i></div>
+          <div class="AboutMeImage">
+            <i class="fa-solid fa-circle-user"></i>
+          </div>
           <h2 class="AboutMeMainHeader">Ammar Yasser</h2>
           <p class="AboutMeDiscription">Software developer</p>
           <ul class="about-tags" aria-label="Interests">
@@ -87,17 +115,38 @@
             <li>JavaScript Enthusiast</li>
             <li>Linux User</li>
           </ul>
-          <p class="about-summary">Building functional web experiences, exploring backend development, and learning how software works beyond the browser.</p>
+          <p class="about-summary">
+            Building functional web experiences, exploring backend development,
+            and learning how software works beyond the browser.
+          </p>
         </div>
         <div class="about-story">
           <p class="about-eyebrow">A little about me</p>
-          <p class="about-intro">Hey! I'm Ammar, a web developer passionate about programming, technology, and understanding how things work behind the scenes.</p>
-          <p>I build websites using <strong>HTML, CSS, and JavaScript</strong> while expanding my knowledge of <strong>React, TypeScript, Node.js, and Express.</strong></p>
-          <p>Beyond web development, I enjoy exploring Linux, experimenting with development tools.</p>
-          <p>I'm also interested in programming language design and low-level computing.</p>
+          <p class="about-intro">
+            Hey! I'm Ammar, a web developer passionate about programming,
+            technology, and understanding how things work behind the scenes.
+          </p>
+          <p>
+            I build websites using
+            <strong>HTML, CSS, and JavaScript</strong> while expanding my
+            knowledge of
+            <strong>React, TypeScript, Node.js, and Express.</strong>
+          </p>
+          <p>
+            Beyond web development, I enjoy exploring Linux, experimenting with
+            development tools.
+          </p>
+          <p>
+            I'm also interested in programming language design and low-level
+            computing.
+          </p>
           <div class="about-focus">
             <h2 class="about-eyebrow">Currently focused on</h2>
-            <p>My current focus is improving my development skills, building practical projects, and growing into a capable full-stack developer.</p>
+            <p>
+              My current focus is improving my development skills, building
+              practical projects, and growing into a capable full-stack
+              developer.
+            </p>
           </div>
         </div>
       </div>
@@ -125,8 +174,17 @@
           <p id="contactError" class="contactError" hidden></p>
         </form>
         <div id="contactThanks" class="contactThanks" hidden>
-          <svg class="contactSuccessIcon" viewBox="0 0 96 96" aria-hidden="true">
-            <circle class="contactSuccessCircle" cx="48" cy="48" r="39"></circle>
+          <svg
+            class="contactSuccessIcon"
+            viewBox="0 0 96 96"
+            aria-hidden="true"
+          >
+            <circle
+              class="contactSuccessCircle"
+              cx="48"
+              cy="48"
+              r="39"
+            ></circle>
             <path class="contactSuccessCheck" d="m29 49 12 12 27-29"></path>
           </svg>
           <p>Thanks — I'll be in touch.</p>
@@ -140,16 +198,39 @@
     <!-- Navbar -->
     <footer id="nav">
       <div class="navbar">
-        <button id="toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+        <button
+          id="toggle"
+          type="button"
+          aria-label="Switch to light mode"
+          aria-pressed="false"
+        >
           <i class="fa-regular fa-lightbulb" aria-hidden="true"></i>
         </button>
         <ul>
-          <li value="0"><a href="#home" aria-label="Home"><i class="fa-regular fa-house"></i></a></li>
-          <li value="1"><a href="#projects" aria-label="Projects"><i class="fa-regular fa-file-code"></i></a></li>
-          <li value="2"><a href="#about" aria-label="About me"><i class="fa-regular fa-circle-user"></i></a></li>
-          <li value="3"><a href="#contact" aria-label="Contact"><i class="fa-regular fa-envelope"></i></a></li>
+          <li value="0">
+            <a href="#home" aria-label="Home"
+              ><i class="fa-regular fa-house"></i
+            ></a>
+          </li>
+          <li value="1">
+            <a href="#projects" aria-label="Projects"
+              ><i class="fa-regular fa-file-code"></i
+            ></a>
+          </li>
+          <li value="2">
+            <a href="#about" aria-label="About me"
+              ><i class="fa-regular fa-circle-user"></i
+            ></a>
+          </li>
+          <li value="3">
+            <a href="#contact" aria-label="Contact"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </li>
         </ul>
-        <div id="circle" aria-hidden="true"><i class="fa-regular fa-house"></i></div>
+        <div id="circle" aria-hidden="true">
+          <i class="fa-regular fa-house"></i>
+        </div>
       </div>
     </footer>
 
